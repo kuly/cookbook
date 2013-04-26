@@ -3,9 +3,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Homepage</title>
+<title>Livro de Receitas ES</title>
 </head>
 <body>
 	It works! This page was rendered on ${currentTime}
+	<a href="/recipes">Listar Receitas</a><br/>
+	<a href="/recipes/create">Criar Receitas</a>
 </body>
 </html>

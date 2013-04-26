@@ -56,4 +56,12 @@
             <version>${version.javax.servlet.jstl}</version>
         </dependency>
 	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>forplay-legacy</id>
+			<url>http://forplay.googlecode.com/svn/mavenrepo</url>
+		</repository>
+	</repositories>
+	
 </project>

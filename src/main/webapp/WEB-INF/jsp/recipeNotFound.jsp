@@ -5,6 +5,6 @@
 <title>Recipe Not Found</title>
 </head>
 <body>
-    This is not the recipe you are looking for....
+   A receita com o id ${recipe.id } não foi encontrada pá....
 </body>
 </html>
