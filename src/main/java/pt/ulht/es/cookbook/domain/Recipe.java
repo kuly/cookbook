@@ -8,26 +8,21 @@ public class Recipe {
 	private String problema;
 	private String solucao;
 	private String id;
-	private static int ide = 1234567;
-	
-	
-public Recipe(String titulo, String problema, String solucao){
-	
-	this.titulo=titulo;
-	this.problema=problema;
-	this.solucao=solucao;
-	this.id = setId();
-}
 
-public String getId() {
-	return this.id;
-}
+	public Recipe(String titulo, String problema, String solucao) {
 
-public String setId() {
-	ide++;
-	id = ""+ide;
-	return id;	
-}
+		this.titulo = titulo;
+		this.problema = problema;
+		this.solucao = solucao;
+	}
 
+	public String getId() {
+		return this.id;
+	}
+
+	public String setId(String key) {
+		this.id = key;
+		return this.id;
+	}
 
 }

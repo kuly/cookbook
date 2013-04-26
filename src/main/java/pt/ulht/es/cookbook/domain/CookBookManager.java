@@ -10,7 +10,7 @@ public class CookBookManager {
 	
 	public static void saveRecipe(Recipe recipe) {
 		String key=nextRecipeId+"";
-		recipe.setId();
+		recipe.setId(key);
 		RECIPE_MAP.put(key, recipe);
 		nextRecipeId++;
 		
