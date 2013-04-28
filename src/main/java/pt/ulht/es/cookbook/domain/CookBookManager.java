@@ -1,5 +1,6 @@
 package pt.ulht.es.cookbook.domain;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +19,10 @@ public class CookBookManager {
 
 	public static Recipe getRecipe(String id) {
 		return RECIPE_MAP.get(id);
+	}
+
+	public static Collection<Recipe> getRecipes() {
+		return RECIPE_MAP.values();
 	}
 
 }

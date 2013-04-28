@@ -10,7 +10,6 @@ public class Recipe {
 	private String id;
 
 	public Recipe(String titulo, String problema, String solucao) {
-
 		this.titulo = titulo;
 		this.problema = problema;
 		this.solucao = solucao;
@@ -25,4 +24,15 @@ public class Recipe {
 		return this.id;
 	}
 
+	public String getTitulo() {
+		return titulo;
+	}
+	
+	public String getProblema() {
+		return problema;
+	}
+	
+	public String getSolucao() {
+		return solucao;
+	}
 }

@@ -1,7 +1,6 @@
 package pt.ulht.es.cookbook.controller;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
@@ -19,16 +18,11 @@ public class RecipeController {
   
     @RequestMapping(method=RequestMethod.GET, value="/recipes")
     public String listRecipes(Model model) {
-
-        List<String> values = new ArrayList<String>();
-        values.add("Ola");
-        values.add("Mundo");        
-        model.addAttribute("items", values);
-        
-        return "listRecipes";
+    	Collection<Recipe> recipes = CookBookManager.getRecipes();
+    	model.addAttribute("recipes", recipes);
+    	return "listRecipes";
     }
-    
-    
+
     @RequestMapping("recipes/create")
     public String showRecipeCreationForm() {
     	return "CreateRecipe";	
@@ -46,14 +40,11 @@ public class RecipeController {
     	
     }
     
-    
-    
     @RequestMapping(method=RequestMethod.GET, value="/recipes/{id}")
     public String showRecipe(Model model, @PathVariable String id) {
 
      Recipe recipe =CookBookManager.getRecipe(id);		
-     
-
+  
         if(recipe != null) {
         	model.addAttribute("recipe", recipe);
         	return "detailedRecipe";
@@ -62,7 +53,5 @@ public class RecipeController {
 			return "recipeNotFound";
 		}
     }
-        
-    
-    
+ 
 }
