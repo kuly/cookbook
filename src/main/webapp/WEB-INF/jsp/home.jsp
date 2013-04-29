@@ -5,9 +5,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Projecto ES</title>
 </head>
-<body>
-	Hora Actual: ${currentTime}<br/>
-	<a href="/recipes">Listar Receitas</a><br/>
-	<a href="/recipes/create">Criar Receitas</a>
-</body>
+<body><center>
+	<h1>COOKBOOK</h1>
+	Data Actual: ${currentTime}<br>
+	<br>
+	<button><a href="/recipes"><b>Listar Receitas</b></a><br/></button>
+	<br>
+	<button><a href="/recipes/create"><b>Criar Receitas</b></a></button>
+	<br>
+	
+
+
+</center></body>
 </html>

@@ -7,10 +7,14 @@
 <title>Lista de Receitas</title>
 </head>
 <body>
+<center><h1>Lista de Receitas</h1></center>
 <ul>
-<c:forEach var="recipe" items='${recipes}'>
+	<c:forEach var="recipe" items='${recipes}'>
+	<li>
 	<a href="/recipes/${recipe.id}">${recipe.titulo}</a> <br />
 </c:forEach>
 </ul>
+
+<button><a href="/"><b>Home</b></a></button>
 </body>
 </html>

@@ -7,10 +7,14 @@
 <title>Recipe ${recipe.id}</title>
 </head>
 <body>
-	<h1>${recipe.titulo}</h1>
+	<center><h1>${recipe.titulo}</h1></center>
 	<b>Problema</b>
 	<p>	${recipe.problema}</p>
 	<b>Solução</b>
 	<p>	${recipe.solucao}</p>
+	
+	
+	<button><a href="/recipes"><b>Receitas</b></a></button>
+	<button><a href="/"><b>Home</b></a></button>
 </body>
 </html>
