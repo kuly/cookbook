@@ -11,6 +11,7 @@
 	<br>
 	<button><a href="/recipes"><b>Listar Receitas</b></a><br/></button>
 	<br>
+	<br>
 	<button><a href="/recipes/create"><b>Criar Receitas</b></a></button>
 	<br>
 	

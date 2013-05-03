@@ -5,16 +5,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lista de Receitas</title>
+<%@ include file="common/libs.jsp" %>
 </head>
 <body>
-<center><h1>Lista de Receitas</h1></center>
-<ul>
-	<c:forEach var="recipe" items='${recipes}'>
-	<li>
-	<a href="/recipes/${recipe.id}">${recipe.titulo}</a> <br />
-</c:forEach>
-</ul>
-
-<button><a href="/"><b>Home</b></a></button>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<center><h1>Lista de Receitas</h1></center>
+			<ul>
+				<c:forEach var="recipe" items='${recipes}'>
+				<li>
+				<a href="/recipes/${recipe.id}">${recipe.titulo}</a> <br />
+			</c:forEach>
+			</ul>
+			
+			<button><a href="/"><b>Home</b></a></button>
+		</div>
+	</div>
+</div>
 </body>
 </html>
