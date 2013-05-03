@@ -17,6 +17,8 @@
 	<p>	${recipe.solucao}</p>
 	<b>Autor</b>
 	<p>	${recipe.autor}</p>
+	<b>Data</b>
+	<p>	${recipe.data}</p>
 	
 	<button><a href="/recipes"><b>Voltar</b></a></button>
 	<button><a href="/"><b>Home</b></a></button>

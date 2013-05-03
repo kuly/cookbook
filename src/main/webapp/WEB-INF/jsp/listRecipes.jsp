@@ -18,6 +18,9 @@
 				<a href="/recipes/${recipe.id}">${recipe.titulo}</a> <br />
 			</c:forEach>
 			</ul>
+			<script type="text/javascript">
+  				document.getElementById('date').value = Date();
+			</script>
 			
 			<button><a href="/"><b>Home</b></a></button>
 		</div>

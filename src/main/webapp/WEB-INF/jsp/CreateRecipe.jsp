@@ -7,7 +7,13 @@
 	Problema:<input type ="text" name="problema"/><br/>
 	Solução:<input type ="text" name="solucao"/><br/>
 	Autor:<input type ="text" name="autor"/><br/>
+	
 	<input type="submit" value="Criar Receita" />
+	
+
+<script type="text/javascript">
+  document.getElementById('date').value = Date();
+</script>
 </form>
 </div>
 
