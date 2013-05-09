@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <body>
+<center><h1><img src="/static/img/criarReceita.png" width="346" height="66"></h1></center>
 <div>
 <form method="post" action="/recipes" >
 	Titulo:<input type ="text" name="titulo"/><br/>

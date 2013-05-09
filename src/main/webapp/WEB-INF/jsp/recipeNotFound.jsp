@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Recipe Not Found</title>
+<title>Receita nao encontrada</title>
 </head>
 <body>
-   A receita com o id ${recipe.id } não foi encontrada pá....
+   Pedimos desculpa, mas a receita com o id ${recipe.id} não foi encontrada....
 </body>
 </html>

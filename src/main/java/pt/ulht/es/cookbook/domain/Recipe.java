@@ -1,4 +1,3 @@
-//para apagar o comment - versao pelo fb...
 
 package pt.ulht.es.cookbook.domain;
 
@@ -45,6 +44,7 @@ public class Recipe {
 	public String getSolucao() {
 		return solucao;
 	}
+
 	public String getAutor() {
 		return autor;
 	}

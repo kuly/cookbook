@@ -11,7 +11,7 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<center><h1>Lista de Receitas</h1></center>
+			<center><h1><img src="/static/img/listaReceitas.png" width="599" height="66"></h1></center>
 			<ul>
 				<c:forEach var="recipe" items='${recipes}'>
 				<li>

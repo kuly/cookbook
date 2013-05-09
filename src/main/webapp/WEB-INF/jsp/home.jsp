@@ -3,10 +3,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Projecto ES</title>
+<title>Projecto ES - Cookbook</title>
 </head>
 <body><center>
-	<h1>COOKBOOK</h1>
+	<h1><img src="/static/img/title.png" alt="CookBook" width="346" height="66"></h1>
 	Data Actual: ${currentTime}<br>
 	<br>
 	<button><a href="/recipes"><b>Listar Receitas</b></a><br/></button>
@@ -15,7 +15,5 @@
 	<button><a href="/recipes/create"><b>Criar Receitas</b></a></button>
 	<br>
 	
-
-
 </center></body>
 </html>

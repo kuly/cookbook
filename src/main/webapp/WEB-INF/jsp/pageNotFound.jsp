@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Not Found</title>
+<title>Projeto ES - Nao encontrado</title>
 </head>
 <body>
-    This is not the page you are looking for...
+    Pedimos desculpa mas nao foi encontrada a pagina solicitada...
 </body>
 </html>
