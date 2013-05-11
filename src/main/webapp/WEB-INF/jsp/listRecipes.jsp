@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lista de Receitas</title>
-<%@ include file="common/libs.jsp" %>
 </head>
 <body>
 <div class="container-fluid">
