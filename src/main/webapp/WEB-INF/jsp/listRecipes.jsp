@@ -4,23 +4,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lista de Receitas</title>
+<title>Projeto ES - Lista de Receitas</title>
+<%@ include file="common/libs.jsp" %>
 </head>
 <body>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
 			<center><h1><img src="/static/img/listaReceitas.png" width="599" height="66"></h1></center>
+			
+			<div>
+			<div align="center">
+				<table width="60%" border="0">
+  					<tr>
+    				<td bgcolor="#99CC66">&nbsp;</td>
+  					</tr>
+				</table>
+			</div>
+			<br/><br/>
 			<ul>
 				<c:forEach var="recipe" items='${recipes}'>
 				<li>
-				<a href="/recipes/${recipe.id}">${recipe.titulo}</a> <br />
+				<a href="/recipes/${recipe.id}">${recipe.titulo}</a> <br/>
 			</c:forEach>
 			</ul>
 			<script type="text/javascript">
   				document.getElementById('date').value = Date();
 			</script>
-			
+			<br/>
 			<button><a href="/"><b>Home</b></a></button>
 		</div>
 	</div>
