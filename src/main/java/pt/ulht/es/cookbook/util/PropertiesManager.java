@@ -13,7 +13,6 @@ import pt.ist.fenixframework.project.exception.FenixFrameworkProjectException;
 import pt.ist.fenixframework.pstm.dml.FenixDomainModelWithOCC;
 import pt.ulht.es.cookbook.domain.CookbookManager;
 
-
 public class PropertiesManager {
 
 	private static final Properties properties = new Properties();
