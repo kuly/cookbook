@@ -20,7 +20,7 @@
  
  	<filter>
 		<filter-name>transaction-filter</filter-name>
-		<filter-class>pt.ulht.es.cookbookmanager.filter.TransactionFilter</filter-class>
+		<filter-class>pt.ulht.es.cookbook.filter.TransactionFilter</filter-class>
 	</filter>
 
 	<filter-mapping>
