@@ -25,7 +25,7 @@
 			<ul>
 				<c:forEach var="recipe" items='${recipes}'>
 				<li>
-				<a href="/recipes/${recipe.id}">${recipe.titulo}</a> <br/>
+				<a href="/recipes/${recipe.externalId}">${recipe.title}</a> <br/>
 			</c:forEach>
 			</ul>
 			<script type="text/javascript">

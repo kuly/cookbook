@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Receita ${recipe.id}</title>
+<title>Receita ${recipe.externalId}</title>
 <%@ include file="common/libs.jsp" %>
 </head>
 <body>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<center><h1>${recipe.titulo}</h1></center>
+			<center><h1>${recipe.title}</h1></center>
 		<div>
 		<div align="center">
 			<table width="60%" border="0">
@@ -22,13 +22,13 @@
 		</div>
 				<br/><br/>	
 				<b>Problema</b>
-				<p>	${recipe.problema}</p>
+				<p>	${recipe.problem}</p>
 				<b>Solução</b>
-				<p>	${recipe.solucao}</p>
+				<p>	${recipe.solution}</p>
 				<b>Autor</b>
-				<p>	${recipe.autor}</p>
+				<p>	${recipe.author}</p>
 				<b>Data</b>
-				<p>	${recipe.data}</p>
+				<p>	${recipe.creationTimestamp}</p>
 				<br/><br/>
 				<button><a href="/recipes"><b>Apagar Receita </b></a></button>
 				<button><a href="/recipes"><b>Voltar</b></a></button>
