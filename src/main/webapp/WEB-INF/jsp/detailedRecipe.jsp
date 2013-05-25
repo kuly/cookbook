@@ -27,10 +27,17 @@
 				<p>	${recipe.solution}</p>
 				<b>Autor</b>
 				<p>	${recipe.author}</p>
+				</br>
+				<b>Tags:</b>
+				<p>	${recipe.tags}</p>
 				<b>Data</b>
 				<p>	${recipe.creationTimestamp}</p>
 				<br/><br/>
-				<button><a href="/recipes"><b>Apagar Receita </b></a></button>
+				<form 						
+					method="POST" action="${recipe.externalId}">
+				  	<input type="hidden" name="_method" value="DELETE">
+    				<input type="submit" value="delete">
+				</form>	
 				<button><a href="/recipes"><b>Voltar</b></a></button>
 				<button><a href="/"><b>Home</b></a></button>
 		</div>

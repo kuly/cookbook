@@ -38,6 +38,10 @@
 	                            <td>Autor:</td>
 	                            <td><input type ="text" name="autor"/></td>
                           	</tr>
+                          	<tr>
+	                            <td>Tags:</td>
+	                            <td><input type ="text" name="tags"/></td>
+                          	</tr>
 						</table>
 					</table>
 					<br/>		

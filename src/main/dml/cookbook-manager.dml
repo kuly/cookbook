@@ -8,6 +8,7 @@ class Recipe {
 	String problem;
 	String solution;
 	String author;
+	String tags;
 	DateTime creationTimestamp;
 	}
 	
