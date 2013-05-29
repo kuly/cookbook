@@ -5,13 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Erro ao criar</title>
+<%@ include file="common/libs.jsp" %>
 </head>
 <body>
 	<img src="/static/img/notpass.jpg" width="175" height="180">
 	</br>
-	Atenção! Todos os campos têm de estar todos preenchidos
+	Atenção! Todos os campos excepto o "Tags" são obrigatórios e têm de estar preenchidos
 	para poder criar a receita...
 	<br/><br/>
-	<button><a href="/recipes/create"><b>Voltar a criar</b></a></button>
+	<a href="/recipes/create" class="btn btn-small btn-danger">Voltar a criar</a>
 </body>
 </html>

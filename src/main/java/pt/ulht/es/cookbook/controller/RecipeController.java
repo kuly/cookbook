@@ -65,11 +65,12 @@ public class RecipeController {
   * projetos com spring mvc e fenix framework..... está a devolver um erro de POST
   * Ação do form criada no ficheiro detailedRecipe.jsp
   */
-    @RequestMapping(method = RequestMethod.DELETE, value = "recipes/{id}")
+    @RequestMapping(method = RequestMethod.POST, value = "recipes/{id}")
     public String deleteRecipe(Model model, @PathVariable String id) {
-        //Recipe deleteRecipe = AbstractDomainObject.fromExternalId(id);    
+    	    //Recipe recipe = 
     	//deleteRecipe.removeCookbookManager();
-            return "redirect:/listRecipes";
+    	
+    	return "redirect:/listRecipes";
     }
     
 }

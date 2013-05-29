@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Projeto ES - Cookbook</title>
+<%@ include file="common/libs.jsp" %>
 </head>
 <body>
 <center>
@@ -16,12 +17,12 @@
 	    		<td bgcolor="#99CC66">&nbsp;</td>
 	  			</tr>
   			</table>
-		</div>
+		</div>	
 	<br>
-	<button><a href="/recipes"><b>Listar Receitas</b></a><br/></button>
+	<a href="/recipes/create" class="btn btn-small btn-success">Criar Receitas</a>
 	<br>
 	<br>
-	<button><a href="/recipes/create"><b>Criar Receitas</b></a></button>
+	<a href="/recipes" class="btn btn-small btn-primary">Listar Receitas</a>
 	<br>
 </center>
 </body>

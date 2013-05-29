@@ -36,10 +36,10 @@
 				<form 						
 					method="POST" action="${recipe.externalId}">
 				  	<input type="hidden" name="_method" value="DELETE">
-    				<input type="submit" value="delete">
+    				<input type="submit" value="Apagar Receita">
 				</form>	
-				<button><a href="/recipes"><b>Voltar</b></a></button>
-				<button><a href="/"><b>Home</b></a></button>
+				<a href="/recipes" class="btn btn-small btn-primary">Voltar</a>
+				<a href="/" class="btn btn-small btn-primary">Home</a>
 		</div>
 		</div>
 	</div>

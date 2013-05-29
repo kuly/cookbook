@@ -36,16 +36,18 @@ public class Recipe extends Recipe_Base {
      * estava a tentar utilizar na implementação logo do setTags mas n dá por causa da bd
      * Provavelmente terá de ser movido para o recipeController
      * 
-     * 
+     *
 	public void searchTags(String[] tags){
 
-		//String s, key;
-	//	while (str. ){
+		String data = this.getTags();
+		System.out.println("tags:" + data);
+		
+		//	while (str. ){
 			
 		//	s=str.split(",");
 			//key=s[0].trim();
 			//table.put(value);
 	}
-    
- */
+    */
+ 
 }

@@ -45,16 +45,15 @@
 						</table>
 					</table>
 					<br/>		
-					<input type="submit" value="Criar Receita" />
+					<button class="btn btn-small btn-success" type="submit">Criar Receita</button>
 					<script type="text/javascript">
 					  document.getElementById('date').value = Date();
 					</script>
 					<br/><br/>	
-					<input type="reset" value="Reset" style="color:RED" />
-
+					<button class="btn btn-small btn-danger" type="reset">Limpar campos</button>
 				</form>	
 			</div>
-					<button><a href="/"><b>Home</b></a></button>
+					<a href="/" class="btn btn-small btn-primary">Home</a>
 		</div>
 	</div>
 </div>

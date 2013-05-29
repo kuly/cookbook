@@ -32,7 +32,7 @@
   				document.getElementById('date').value = Date();
 			</script>
 			<br/>
-			<button><a href="/"><b>Home</b></a></button>
+			<a href="/" class="btn btn-small btn-primary">Home</a>
 		</div>
 	</div>
 </div>
