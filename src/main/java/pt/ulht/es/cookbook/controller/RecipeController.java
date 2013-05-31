@@ -60,16 +60,12 @@ public class RecipeController {
 			return "recipeNotFound";
 		}
     }
- /*
-  * Metodo para o Delete. implementação pesquisada e implementada com sucesso em alguns
-  * projetos com spring mvc e fenix framework..... está a devolver um erro de POST
-  * Ação do form criada no ficheiro detailedRecipe.jsp
-  */
-    @RequestMapping(method = RequestMethod.POST, value = "recipes/{id}")
+
+    @RequestMapping(method = RequestMethod.GET, value = "recipes/{id}/delete")
     public String deleteRecipe(Model model, @PathVariable String id) {
-    	    //Recipe recipe = 
-    	//deleteRecipe.removeCookbookManager();
-    	
+    	     
+    	Recipe recipe = AbstractDomainObject.fromExternalId(id);
+    	recipe.delete();
     	return "redirect:/listRecipes";
     }
     

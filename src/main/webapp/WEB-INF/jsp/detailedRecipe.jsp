@@ -33,9 +33,8 @@
 				<b>Data</b>
 				<p>	${recipe.creationTimestamp}</p>
 				<br/><br/>
-				<form 						
-					method="POST" action="${recipe.externalId}">
-				  	<input type="hidden" name="_method" value="DELETE">
+				<form method="GET" action="${recipe.externalId}/delete">
+					<input type="hidden" name="_method" value="DELETE">
     				<input type="submit" value="Apagar Receita">
 				</form>	
 				<a href="/recipes" class="btn btn-small btn-primary">Voltar</a>
