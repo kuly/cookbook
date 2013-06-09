@@ -24,19 +24,19 @@
 						<table width="60%" border="0">
 							<tr>
 	                            <td width="17%"><p>Titulo:</p></td>
-	                            <td width="83%"><input type ="text" name="titulo"/></td>
+	                            <td width="83%"><input type ="text" name="title"/></td>
 	                        </tr>
 	                        <tr>
 	                            <td>Problema:</td>
-	                            <td><input type ="text" name="problema"/></td>
+	                            <td><input type ="text" name="problem"/></td>
                           	</tr>
                           	<tr>
 	                            <td>Solução:</td>
-	                            <td><input type ="text" name="solucao"/></td>
+	                            <td><input type ="text" name="solution"/></td>
                           	</tr>
                           	<tr>
 	                            <td>Autor:</td>
-	                            <td><input type ="text" name="autor"/></td>
+	                            <td><input type ="text" name="author"/></td>
                           	</tr>
                           	<tr>
 	                            <td>Tags:</td>

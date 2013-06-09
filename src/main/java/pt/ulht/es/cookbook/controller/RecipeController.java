@@ -1,7 +1,9 @@
 package pt.ulht.es.cookbook.controller;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +21,8 @@ public class RecipeController {
   
     @RequestMapping(method=RequestMethod.GET, value="/recipes")
     public String listRecipes(Model model) {
-    	Set<Recipe> recipes = CookbookManager.getInstance().getRecipeSet();
+    	List<Recipe> recipes = new ArrayList<Recipe>(CookbookManager.getInstance().getRecipeSet());
+    	Collections.sort(recipes);
     	model.addAttribute("recipes", recipes);
     	return "listRecipes";
     }
@@ -31,18 +34,18 @@ public class RecipeController {
     
     @RequestMapping(method=RequestMethod.POST, value="/recipes")
     public String createRecipe(@RequestParam Map<String,String>params){
-    	String titulo = params.get("titulo");
-    	String problema = params.get("problema");
-    	String solucao = params.get("solucao");
-    	String autor = params.get("autor");
+    	String title = params.get("title");
+    	String problem = params.get("problem");
+    	String solution = params.get("solution");
+    	String author = params.get("author");
     	String tags = params.get("tags");
     	
-    	if (titulo.isEmpty() | problema.isEmpty() | solucao.isEmpty() | autor.isEmpty())
+    	if (title.isEmpty() | problem.isEmpty() | solution.isEmpty() | author.isEmpty())
     	{	
     	return "createError";
     	}
     	
-    	Recipe recipe = new Recipe(titulo, problema, solucao, autor, tags);
+    	Recipe recipe = new Recipe(title, problem, solution, author, tags);
     	return "redirect:/recipes/"+recipe.getExternalId();
     	
     }

@@ -1,49 +1,26 @@
 package pt.ulht.es.cookbook.domain;
 
-
-
-public class Recipe extends Recipe_Base {
-
-	
-    public Recipe(String titulo, String problema, String solucao, String autor, String tags) {
-        
-    	setCookbookManager(CookbookManager.getInstance());
-    	setVersion();
-    }
+public class Recipe extends Recipe_Base implements Comparable<Recipe>{
     
-    private void setVersion() {
-		
-		
-	}
+    public  Recipe(String title, String problem, String solution, String author, String tags) {
+    	setCookbookManager(CookbookManager.getInstance());
+    	
+    	if (hasAnyRecipeVersion())
+    		new RecipeVersion(title, problem, solution, author, tags);
+    	else {
+    		RecipeVersion recipe = new RecipeVersion(title, problem, solution, author, tags);
+    		addRecipeVersion(recipe);
+    	}
+    }
 
 	public void delete() {
     	setCookbookManager(null);
     	deleteDomainObject();
-    }
+}
+	
 
-    public void lastVersion(){
-    	
-    	
+	public int compareTo(Recipe o) {
+		return o.getExternalId().toLowerCase().compareTo(o.getExternalId().toLowerCase());
     }
     
-    /*
-     * 
-     * possivel base de trabalho para as pesquisas. Retirado de LP2.
-     * estava a tentar utilizar na implementação logo do setTags mas n dá por causa da bd
-     * Provavelmente terá de ser movido para o recipeController
-     * 
-     *
-	public void search(String[] tags){
-
-		String data = this.getTags();
-		System.out.println("tags:" + data);
-		
-		//	while (str. ){
-			
-		//	s=str.split(",");
-			//key=s[0].trim();
-			//table.put(value);
-	}
-    */
- 
 }

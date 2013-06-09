@@ -12,15 +12,14 @@ class RecipeVersion {
 	String author;
 	String tags;
 	DateTime creationTimestamp;
-	Integer version;
 	}
 	
-	relation CookbookManagerHasrecipes{
-		CookbookManager playsRole cookbookManager {multiplicity 1..1;}
-		Recipe playsRole recipe {multiplicity 0..*;}
+	relation CookbookManagerHasRecipes{
+		CookbookManager playsRole cookbookManager 	{multiplicity 1..1;}
+		Recipe 			playsRole recipe 			{multiplicity 0..*;}
 	}
 	
 	relation RecipeHasRecipeVersion{
-		Recipe playsRole recipe {multiplicity 1..1;}
-		RecipeVersion playsRole recipeVersion {multiplicity 0..*;}
+		Recipe 			playsRole recipe 		{multiplicity 1..1;}
+		RecipeVersion 	playsRole recipeVersion {multiplicity 0..*;}
 	}
