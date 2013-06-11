@@ -24,6 +24,9 @@
 	<br>
 	<a href="/recipes" class="btn btn-small btn-primary">Listar Receitas</a>
 	<br>
+	<br>
+	<a href="/recipes/search" class="btn btn-small btn-primary">Procurar Receitas</a>
+	<br>
 </center>
 </body>
 </html>

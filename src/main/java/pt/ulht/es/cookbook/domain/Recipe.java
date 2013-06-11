@@ -22,5 +22,17 @@ public class Recipe extends Recipe_Base implements Comparable<Recipe>{
 	public int compareTo(Recipe o) {
 		return o.getExternalId().toLowerCase().compareTo(o.getExternalId().toLowerCase());
     }
+
+	public boolean match(String[] split) {
+		for(String token : split){
+			if(getTitle().toLowerCase().contains(token.toLowerCase()) ||
+				(getProblem().toLowerCase().contains(token.toLowerCase()) ||
+				(getSolution().toLowerCase().contains(token.toLowerCase()) ||
+				(getTags().toLowerCase().contains(token.toLowerCase() )) {
+				return true;
+			}
+		}
+		return false;
+	}
     
 }

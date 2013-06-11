@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Projeto ES - Lista de Receitas</title>
+<title>Projeto ES - Resultados de Procura</title>
 <%@ include file="common/libs.jsp" %>
 </head>
 <body>

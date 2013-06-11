@@ -71,5 +71,25 @@ public class RecipeController {
     	recipe.delete();
     	return "redirect:/listRecipes";
     }
+
+    @RequestMapping(method = RequestMethod.POST, value ="recipes/search")
+    public String searchRecipes(@RequestParam Map<String, String> params, Model model) {
+    	String searchParams = params.get("searchParams");
+    	String[] split = searchParams.split(",");
+    	List<Recipe> resultados = new ArrayList<Recipe>();
+	    	for(Recipe recipe : CookbookManager.getInstance().getRecipeSet()){
+	    		if(recipe.match(split)){
+	    			resultados.add(recipe);
+	    		}
+	    	
+	    	}
+	    model.addAttribute("recipes", resultados);
+    	return "searchResults";	
+    }
+    
+    @RequestMapping(method = RequestMethod.GET, value ="recipes/search")
+    public String showRecipeSearchForm() {
+    	return "searchRecipeForm";	
+    }
     
 }
