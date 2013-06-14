@@ -7,12 +7,9 @@
 <%@ include file="common/libs.jsp" %>
 </head>
 <body>
-	<form>
+	<form method="post" action="/recipes/search">
 		<input type="text" placeholder= "Insira parametros de pesquisa" name= "searchParams" />
 		<input type="submit" value="Procura" />	
-	
-	
-	
 	</form>
 
 </body>

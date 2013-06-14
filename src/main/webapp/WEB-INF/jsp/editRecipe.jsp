@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-<title>Projeto ES - Criar Receita</title>
+<title>Projeto ES - Editar Receita</title>
 <%@ include file="common/libs.jsp" %>
 </head>
 <body>
@@ -19,36 +19,34 @@
 			</div>
 			</div>			
 			<div>
-				<form method="post" action="/recipes" >	
+				<form method="post" action="/editRecipe/${recipe.getExternalId()}" >	
 					<table class="table">
 						<table width="60%" border="0">
 							<tr>
 	                            <td width="17%"><p>Titulo:</p></td>
-	                            <td width="83%"><input type ="text" name="title" value="${recipe.title}/></td>
+	                            <td width="83%"><input type ="text" name="title" value="${recipe.ultima().title}" /></td>
 	                        </tr>
 	                        <tr>
 	                            <td>Problema:</td>
-	                            <td><input type ="text" name="problem" value="${recipe.problem}/></td>
+	                            <td><input type ="text" name="problem" value="${recipe.ultima().problem}"/></td>
                           	</tr>
                           	<tr>
 	                            <td>Solução:</td>
-	                            <td><input type ="text" name="solution" value="${recipe.solution}/></td>
+	                            <td><input type ="text" name="solution" value="${recipe.ultima().solution}"/></td>
                           	</tr>
                           	<tr>
 	                            <td>Autor:</td>
-	                            <td><input type ="text" name="author" value="${recipe.author}/></td>
+	                            <td><input type ="text" name="author" value="${recipe.ultima().author}"/></td>
                           	</tr>
                           	<tr>
 	                            <td>Tags:</td>
-	                            <td><input type ="text" name="tags" value="${recipe.tags}/></td>
+	                            <td><input type ="text" name="tags" value="${recipe.ultima().tags}"/></td>
                           	</tr>
 						</table>
 					</table>
-					<br/>	
-					<form method="GET" action="editRecipe/${items.getRecipe().getExternalId()}>
-					<input type="hidden" name="_method" value="DELETE">
-    				<input type="submit" value="Apagar Receita">
-				</form>		
+					<br/>			
+					<br/><br/>
+					<button class="btn btn-small btn-success" type="submit">Gravar</button>
 					<br/><br/>	
 					<button class="btn btn-small btn-danger" type="reset">Limpar campos</button>
 				</form>	

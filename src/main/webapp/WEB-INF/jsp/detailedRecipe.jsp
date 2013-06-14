@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Receita ${recipe.externalId}</title>
+<title> ${recipe.ultima().title}</title>
 <%@ include file="common/libs.jsp" %>
 </head>
 <body>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<center><h1>${recipe.title}</h1></center>
+			<center><h1>${recipe.ultima().title}</h1></center>
 		<div>
 		<div align="center">
 			<table width="60%" border="0">
@@ -22,16 +22,16 @@
 		</div>
 				<br/><br/>	
 				<b>Problema</b>
-				<p>	${recipe.problem}</p>
+				<p>	${recipe.ultima().problem}</p>
 				<b>Solução</b>
-				<p>	${recipe.solution}</p>
+				<p>	${recipe.ultima().solution}</p>
 				<b>Autor</b>
-				<p>	${recipe.author}</p>
+				<p>	${recipe.ultima().author}</p>
 				</br>
 				<b>Tags:</b>
-				<p>	${recipe.tags}</p>
+				<p>	${recipe.ultima().tags}</p>
 				<b>Data</b>
-				<p>	${recipe.creationTimestamp}</p>
+				<p>	${recipe.ultima().creationTimestamp}</p>
 				<br/><br/>
 				<form method="GET" action="${recipe.externalId}/delete">
 					<input type="hidden" name="_method" value="DELETE">

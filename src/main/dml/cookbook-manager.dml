@@ -23,3 +23,8 @@ class RecipeVersion {
 		Recipe 			playsRole recipe 		{multiplicity 1..1;}
 		RecipeVersion 	playsRole recipeVersion {multiplicity 0..*;}
 	}
+	
+	relation RecipeHasRecipeLastVersion{
+		Recipe 			playsRole recipeLastVersion 		{multiplicity 0..1;}
+		RecipeVersion 	playsRole recipeVersionLastVersion {multiplicity 0..1;}
+	}

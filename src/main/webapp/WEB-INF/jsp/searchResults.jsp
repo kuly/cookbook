@@ -25,7 +25,7 @@
 			<ul>
 				<c:forEach var="recipe" items='${recipes}'>
 				<li>
-				<a href="/recipes/${recipe.externalId}">${recipe.title}</a> Opções:<a href="/recipes/${recipe.externalId}/delete" class="btn btn-small btn-primary">Apagar</a> <br/>
+				<a href="/recipes/${recipe.externalId}">${recipe.ultima().title}</a> Opções:<a href="/recipes/${recipe.externalId}/delete" class="btn btn-small btn-primary">Apagar</a> <br/>
 			</c:forEach>
 			</ul>
 			<script type="text/javascript">

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import pt.ist.fenixframework.pstm.AbstractDomainObject;
 import pt.ulht.es.cookbook.domain.CookbookManager;
 import pt.ulht.es.cookbook.domain.Recipe;
+import pt.ulht.es.cookbook.domain.RecipeVersion;
 
 @Controller
 public class RecipeController {
@@ -22,6 +23,7 @@ public class RecipeController {
     @RequestMapping(method=RequestMethod.GET, value="/recipes")
     public String listRecipes(Model model) {
     	List<Recipe> recipes = new ArrayList<Recipe>(CookbookManager.getInstance().getRecipeSet());
+
     	Collections.sort(recipes);
     	model.addAttribute("recipes", recipes);
     	return "listRecipes";
@@ -54,7 +56,7 @@ public class RecipeController {
     public String showRecipe(Model model, @PathVariable String id) {
 
      Recipe recipe = AbstractDomainObject.fromExternalId(id);		
-  
+      
         if(recipe != null) {
         	model.addAttribute("recipe", recipe);
         	return "detailedRecipe";
@@ -69,10 +71,10 @@ public class RecipeController {
     	     
     	Recipe recipe = AbstractDomainObject.fromExternalId(id);
     	recipe.delete();
-    	return "redirect:/listRecipes";
+    	return "redirect:/recipes";
     }
-/*mapping para as pesquisas
-    @RequestMapping(method = RequestMethod.POST, value ="recipes/search")
+ 
+  @RequestMapping(method = RequestMethod.POST, value ="recipes/search")
     public String searchRecipes(@RequestParam Map<String, String> params, Model model) {
     	String searchParams = params.get("searchParams");
     	String[] split = searchParams.split(",");
@@ -85,39 +87,37 @@ public class RecipeController {
 	    	}
 	    model.addAttribute("recipes", resultados);
     	return "searchResults";	
-    }*/
+    }
     
     @RequestMapping(method = RequestMethod.GET, value ="recipes/search")
     public String showRecipeSearchForm() {
     	return "searchRecipeForm";	
     }
- /*metodo para edit.....necessita arranjos para o versionamento  
-    @RequestMapping(method = RequestMethod.GET, value = "recipes/{id}/edit")
+   
+   @RequestMapping(method = RequestMethod.GET, value = "recipes/{id}/edit")
     public String showeditRecipeForm(Model model, @PathVariable String id) { 	     
     	Recipe recipe = AbstractDomainObject.fromExternalId(id);
-    	recipe.addAtribute("recipe", recipe);
+    	model.addAttribute("recipe", recipe);
     	return "editRecipe";
-    }*/
+    }
 
-    @RequestMapping(method=RequestMethod.POST, value="/editRecipe/{id]")
+  @RequestMapping(method=RequestMethod.POST, value="/editRecipe/{id}")
     public String editRecipe(Model model, @PathVariable String id, String title, String problem, String solution, String tags, String author){
-    	/*
-    	String title = params.get("title");
-    	String problem = params.get("problem");
-    	String solution = params.get("solution");
-    	String author = params.get("author");
-    	String tags = params.get("tags");
-    	*/
+    	
+    	//String title = params.get("title");
+    	//String problem = params.get("problem");
+    	//String solution = params.get("solution");
+    	//String author = params.get("author");
+    	//String tags = params.get("tags");
+    	
     	
     	Recipe recipe = AbstractDomainObject.fromExternalId(id);
-    	recipe.edit(title, problem,solution, tags, author);
+    	RecipeVersion versao = new RecipeVersion(title, problem, solution, author, tags);
+    	versao.setRecipeLastVersion(recipe);
+    	recipe.addRecipeVersion(versao);
     	
-    	//if (title.isEmpty() | problem.isEmpty() | solution.isEmpty() | author.isEmpty())
-    	//{	
-    	//return "createError";
-    	//}
     	
     	return "redirect:/recipes/"+recipe.getExternalId();
-    	
+    
     }
 }
