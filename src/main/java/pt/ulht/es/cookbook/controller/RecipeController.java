@@ -71,7 +71,7 @@ public class RecipeController {
     	recipe.delete();
     	return "redirect:/listRecipes";
     }
-
+/*mapping para as pesquisas
     @RequestMapping(method = RequestMethod.POST, value ="recipes/search")
     public String searchRecipes(@RequestParam Map<String, String> params, Model model) {
     	String searchParams = params.get("searchParams");
@@ -85,11 +85,39 @@ public class RecipeController {
 	    	}
 	    model.addAttribute("recipes", resultados);
     	return "searchResults";	
-    }
+    }*/
     
     @RequestMapping(method = RequestMethod.GET, value ="recipes/search")
     public String showRecipeSearchForm() {
     	return "searchRecipeForm";	
     }
-    
+ /*metodo para edit.....necessita arranjos para o versionamento  
+    @RequestMapping(method = RequestMethod.GET, value = "recipes/{id}/edit")
+    public String showeditRecipeForm(Model model, @PathVariable String id) { 	     
+    	Recipe recipe = AbstractDomainObject.fromExternalId(id);
+    	recipe.addAtribute("recipe", recipe);
+    	return "editRecipe";
+    }*/
+
+    @RequestMapping(method=RequestMethod.POST, value="/editRecipe/{id]")
+    public String editRecipe(Model model, @PathVariable String id, String title, String problem, String solution, String tags, String author){
+    	/*
+    	String title = params.get("title");
+    	String problem = params.get("problem");
+    	String solution = params.get("solution");
+    	String author = params.get("author");
+    	String tags = params.get("tags");
+    	*/
+    	
+    	Recipe recipe = AbstractDomainObject.fromExternalId(id);
+    	recipe.edit(title, problem,solution, tags, author);
+    	
+    	//if (title.isEmpty() | problem.isEmpty() | solution.isEmpty() | author.isEmpty())
+    	//{	
+    	//return "createError";
+    	//}
+    	
+    	return "redirect:/recipes/"+recipe.getExternalId();
+    	
+    }
 }
